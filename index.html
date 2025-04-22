@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tosh Autohub - Quality Pre-Owned Vehicles</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Tosh Autohub</div>
+      <p>Your trusted partner for quality pre-owned vehicles</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#inventory">Inventory</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero" id="home">
+      <h1>Find Your Perfect Car at Tosh Autohub</h1>
+      <p>
+        We offer a wide selection of quality pre-owned vehicles at competitive
+        prices.
+      </p>
+      <a href="#inventory" class="btn">Browse Inventory</a>
+    </section>
+
+    <div class="container">
+      <section class="featured-cars" id="inventory">
+        <h2 class="section-title">Featured Vehicles</h2>
+        <div class="cars-grid" id="carsGrid">
+          <!-- Cars will be loaded dynamically from JavaScript -->
+        </div>
+      </section>
+
+      <section class="testimonials" id="about">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonial-slider" id="testimonialSlider">
+          <!-- Testimonials will be loaded dynamically from JavaScript -->
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="success-message" id="successMessage">
+          Thank you for your message! We'll get back to you soon.
+        </div>
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+            <div class="error" id="nameError">Please enter your name</div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <div class="error" id="emailError">
+              Please enter a valid email address
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" />
+            <div class="error" id="phoneError">
+              Please enter a valid phone number
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="interest">Vehicle Interest</label>
+            <select id="interest" name="interest">
+              <option value="">Select a vehicle</option>
+              <!-- Options will be loaded dynamically from JavaScript -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <div class="error" id="messageError">Please enter your message</div>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Modal for car details -->
+    <div class="modal" id="carModal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="modalCarTitle"></h2>
+        <div id="modalCarImage"></div>
+        <p id="modalCarDescription"></p>
+        <div class="car-price" id="modalCarPrice"></div>
+        <h3>Features</h3>
+        <ul id="modalCarFeatures"></ul>
+        <button class="btn" id="testDriveBtn">Schedule a Test Drive</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="logo">Tosh Autohub</div>
+      <div class="contact-info">
+        <p>Email: adelewigitz@gmail.com</p>
+        <p>Phone: 0711527211</p>
+      </div>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p>
+        &copy; <span id="currentYear"></span> Tosh Autohub. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
